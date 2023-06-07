@@ -49,6 +49,9 @@ Route::get('/agenda', function () {
 Route::get('/potensi', function () {
     return view('main.page.potensi');
 });
+Route::get('/galeri', function () {
+    return view('main.page.galeri');
+});
 
 Route::get('/admin', function () {
     return view('admin.auth/login');

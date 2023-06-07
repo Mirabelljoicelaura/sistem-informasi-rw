@@ -41,15 +41,15 @@
                         <img class="img-fluid rounded-4 profile"
                             src="{{ asset('assets/img/main/profile2.png') }}" alt="Profile">
                     </div>
-    
+
                 </div>
                 <div class="col-lg-8">
                     <h1 class="mb-4">SAMBUTAN <span class="text-dark-blue text-uppercase">KETUA RW 05</span></h1>
                     <p class="mb-4"> Assalamualaikum Wr. Wb.</b></p>
-    
+
                     <p class="mb-4" style="line-height: 2">
                     Kemanusiaan Yang Adil dan Beradab adalah sebaik-baik barometer kita sebagai Warga Negara yang baik dalam memberikan pelayanan dan sebagai wakil pemerintah di tengah-tengah masyarakat, karena kemajuan sebuah lingkungan terutama sosial ekonomi bukan hanya menjadi tanggung jawab perorangan. Melainkan tanggung jawab kita semua. Untuk itu hanya dengan niat dan kemauan yang kuat ditambah doa kita Semua insyaAllah mampu mengubah RW 05 Kelurahan Tanjungrejo, Kota Malang ini menjadi lingkungan yang lebih guyub dan rukun, adil dan beradab sosial dan ekonominya. Lebih merdeka dalam segala hal yang positif. Terima kasih. </p>
-    
+
                     <p>
                         <span class="badge rounded-pill bg-dark-blue">#tonggoKuiseduLurPalingCede'k</span>
                         <span class="badge rounded-pill bg-dark-blue">#RW05PeduliLingkungan</span>
@@ -232,7 +232,7 @@
                     </div>
                 </div>
                 <div class="p-2 text-center">
-                    <a href="/agenda"><button class="btn-more">Lihat Lagi</button></a>
+                    <a href="/page/agenda"><button class="btn-more">Lihat Lagi</button></a>
                 </div>
             </div>
 
@@ -324,54 +324,54 @@
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=1"
                                 alt="Random Image"></figure>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=2"
                                 alt="Random Image"></figure>
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=3"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=4"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=5"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=6"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=7"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-    
+
                         <figure><img class="img-fluid img-thumbnail" src="https://picsum.photos/940/650?random=8"
                                 alt="Random Image"></figure>
-    
+
                     </div>
-    
+
                 </div>
             </section>
         </div>
