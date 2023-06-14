@@ -60,7 +60,7 @@
                                                 <td>{{ $item->nama_sosial }}</td>
                                                 <td class="text-right">
                                                     <div class="d-flex justify-content-end">
-                                                        <button class="btn btn-sm btn-warning btn-icon d-flex align-items-center justify-content-center openKTP" style="height: 30px; width: 30px"
+                                                        <button class="btn btn-sm btn-success btn-icon d-flex align-items-center justify-content-center openKTP" style="height: 30px; width: 30px"
                                                             data-toggle="modal"
                                                             data-target="#ktp"
                                                             data-nik="{{ $item->nik }}"
@@ -107,9 +107,10 @@
                         <h5>PROVINSI JAWA TIMUR</h5>
                         <h5>KOTA MALANG</h5>
                     </div>
-                    <div class="bodyKTP" style="overflow: hidden;">
+                    <div class="bodyKTP">
                         <div>
-                            <h5>NIK&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;:&nbsp;</h5><span id="nik" class="openKTP" data-toggle="modal" data-target="#kk"></span>
+                            <h5>NIK<span class="mr-2" style="margin-left: 70px">:</span></h5>
+                            <span id="nik"></span>
                         </div>
                         <table>
                             <tr>
@@ -122,22 +123,22 @@
                             </tr>
                             <tr>
                                 <td>Jenis Kelamin</td>
-                                <td>: <span id="jenis_kelamin"></span>&emsp;&emsp;&ensp;Gol. Darah&emsp;: <span id="golongan_darah"></span></td>
+                                <td>: <span id="jenis_kelamin" class="mr-4"></span>Gol. Darah : <span id="golongan_darah"></span></td>
                             </tr>
                             <tr>
                                 <td>Alamat</td>
                                 <td>: <span id="alamat"></span></td>
                             </tr>
                             <tr>
-                                <td>&emsp;&emsp;&ensp;RT/RW</td>
+                                <td class="pl-4">RT/RW</td>
                                 <td>: 00<span id="rt"></span>/005</td>
                             </tr>
                             <tr>
-                                <td>&emsp;&emsp;&ensp;Kel/Desa</td>
+                                <td class="pl-4">Kel/Desa</td>
                                 <td>: TANJUNGREJO</td>
                             </tr>
                             <tr>
-                                <td>&emsp;&emsp;&ensp;Kecamatan</td>
+                                <td class="pl-4">Kecamatan</td>
                                 <td>: SUKUN</td>
                             </tr>
                             <tr>
@@ -196,6 +197,12 @@
             var agama = $(this).data('agama');
             var status_perkawinan = $(this).data('status_perkawinan');
             var pekerjaan = $(this).data('pekerjaan');
+
+            if (jenis_kelamin === 'L') {
+                jenis_kelamin = 'Laki-laki';
+            } else {
+                jenis_kelamin = 'Perempuan';
+            }
 
             $(".modal-content #nik").text(nik);
             $(".modal-content #nama").text(nama);

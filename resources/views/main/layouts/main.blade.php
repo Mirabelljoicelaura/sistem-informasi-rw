@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/footers/">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<<<<<<< HEAD
 
+=======
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
 
 </head>
 

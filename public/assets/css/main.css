@@ -1,11 +1,17 @@
 .navbar, #ormas h2, #agenda h2, #potensi h2, #agenda h5, #potensi h5{
     font-family: 'Poppins', sans-serif;
+    color: #002147;
 }
 .navbar{
+<<<<<<< HEAD
     background-color: rgba(0, 26, 57, 0.87) ;
     position: sticky;
     /* width: 100%;
     height: 73.7px; */
+=======
+    background-color: rgba(0, 26, 57, 0.9) ;
+    position: sticky;
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
 }
 
 .navbar-brand,
@@ -60,12 +66,17 @@ font-size: 1rem;
 line-height: 1.5;
 }
 
+.card-agenda {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+}
+
 .card img{
 max-height: 500;
 }
 
 .read-more, .read-less{
-color:#485ae4;
+color:rgb(13, 110, 253);
 cursor: pointer;
 font-weight: 400;
 text-transform: lowercase;
@@ -80,24 +91,33 @@ text-decoration: underline;
 width: 200px;
 padding: 5px;
 border: none;
-background: #485ae4;
+background: rgb(10, 88, 202);
 color: white;
 height: 40px;
 border-radius: 30px;
 font-size: 13pt;
 margin-bottom: 0px;
+transition: all, 0.2s;
 }
 
 .btn-more:hover{
-text-decoration: underline;
-background-color: blue
+background-color: rgb(13, 110, 253);
 }
 
 .blue-title{
-color: #485ae4;
+color: rgb(13, 110, 253);
 }
 
+<<<<<<< HEAD
 .potensi img{
+=======
+.potensi .potensi-img {
+    display: flex;
+    justify-content: center;
+}
+
+.potensi img {
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
     margin-left: 15%;
     max-width: 200px;
     max-height: 200px;
@@ -106,8 +126,13 @@ color: #485ae4;
 .bg-dark-blue{
     background: #002147;
 }
+<<<<<<< HEAD
 .text-daark-blue{
     color : 0000AA;
+=======
+.text-dark-blue{
+    color : #002147;
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
 }
 
 /* .potensi{
@@ -129,11 +154,13 @@ color: #485ae4;
     text-align: center;
   }
 
-.ormas .carousel-control-prev,.ormas .carousel-control-next {
-    background-color: #485ae4;
+.ormas .carousel-control-prev,
+.ormas .carousel-control-next {
+    background-color: rgb(10, 88, 202);
     width: 35px;
     height: 35px;
     opacity: 100%;
+<<<<<<< HEAD
   }
 
   /* gallery modal */
@@ -201,8 +228,110 @@ color: #485ae4;
     background-color: #f4f6f9;
 }
 
+=======
+    border-radius: 50% !important;
+    transition: all, 0.2s;
+}
+
+.ormas .carousel-control-prev:hover,
+.ormas .carousel-control-next:hover {
+  background-color: rgb(13, 110, 253)
+}
+
+  /* gallery modal */
+  .lightbox-modal .modal-content {
+    background: var(--lightbox);
+  }
+
+  .lightbox-modal .btn-close {
+    position: absolute;
+    top: 20px;
+    right: 18px;
+    font-size: 1.2rem;
+    z-index: 10;
+  }
+
+  .lightbox-modal .modal-body {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-align: center;
+  }
+
+  .lightbox-modal img {
+    width: auto;
+    max-height: 100vh;
+    max-width: 100%;
+  }
+
+  .lightbox-modal .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(36, 36, 36, 0.75);
+  }
+
+  .lightbox-modal .carousel-control-prev,
+  .lightbox-modal .carousel-control-next {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    width: auto;
+  }
+
+  .lightbox-modal .carousel-control-prev {
+    left: 10%;
+  }
+
+  .lightbox-modal .carousel-control-next {
+    right: 10%;
+  }
+
+.sambutan {
+    background-image: url(/assets/img/main/bg-pantai.jpg) !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.profile {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    object-position: 100% 35%;
+    background-color: rgb(243, 246, 249);
+}
+
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
 .potensi img{
     margin-left: 15%;
     max-width: 200px;
     max-height: 200px;
 }
+<<<<<<< HEAD
+=======
+
+.agenda, .galeri {
+  background-color: rgb(243, 246, 249);
+}
+
+.penduduk {
+  background-image: url(/assets/img/main/bg-penduduk.jpg);
+  background-position: 100% 60%;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.agenda, .potensi {
+  padding: 50px 0;
+}
+
+.galeri {
+  padding: 50px 0 30px 0;
+}
+
+.copyright {
+  color: #909da4;
+  font-size: 13px;
+}
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa

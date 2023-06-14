@@ -8,7 +8,18 @@
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
 
             <div class="carousel-inner">
-                <div class="carousel-item active">
+                @foreach ($agenda as $item)
+                    <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+                        <img src="{{ asset('assets/img/agenda/'. $item->gambar_agenda) }}" class="d-block w-100" alt="..."
+                            style="height:600px; object-fit: cover;">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>{{ $item->judul }}</h5>
+                            <p>{{ $item->deskripsi }}</p>
+                        </div>
+                    </div>
+
+                @endforeach
+                {{-- <div class="carousel-item active">
                     <img src="https://images.unsplash.com/photo-1613395940640-9c2d79562bf7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                         class="d-block w-100" alt="..." style="height:600px; object-fit: cover;">
                 </div>
@@ -19,7 +30,7 @@
                 <div class="carousel-item">
                     <img src="https://images.unsplash.com/photo-1582156307922-c6cd3584b6bf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                         class="d-block w-100" alt="..." style="height:600px; object-fit: cover;">
-                </div>
+                </div> --}}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -60,12 +71,12 @@
             </div>
         </div>
     </section>
-    <div class="row p-3 mb-2 bg-dark-blue text-white" style="background-image: url(/assets/img/main/bg-gunung.jpg); background-position: center; background-repeat: no-repeat; background-size: cover">
+    <div class="penduduk row p-3 mb-2 bg-dark-blue text-white">
         <div class="col-sm-3 wow fadeIn" data-wow-delay="0.1s">
             <div class=" p-1">
                 <div class=" text-center p-4">
                     <i class="fa fa-mobile-screen fa-2x mb-2"></i>
-                    <h2 class="mb-1" data-val="10" id="num">00</h2>
+                    <h2 class="mb-1" data-val="{{ $countL }}" id="num">00</h2>
                     <p class="mb-0">Laki-laki</p>
                 </div>
             </div>
@@ -74,7 +85,7 @@
             <div class=" p-1">
                 <div class=" text-center p-4">
                     <i class="fa fa-users-cog fa-2x mb-2"></i>
-                    <h2 class="mb-1" data-val="80" id="num">00</h2>
+                    <h2 class="mb-1" data-val="{{ $countP }}" id="num">0</h2>
                     <p class="mb-0">Perempuan</p>
                 </div>
             </div>
@@ -83,7 +94,7 @@
             <div class="p-1">
                 <div class="text-center p-4">
                     <i class="fa fa-users fa-2x mb-2"></i>
-                    <h2 class="mb-1" data-val="500" id="num">000</h2>
+                    <h2 class="mb-1" data-val="{{ $countPenduduk }}" id="num">0</h2>
 
                     <p class="mb-0">Jiwa</p>
                 </div>
@@ -93,7 +104,7 @@
             <div class=" p-1">
                 <div class=" text-center p-4">
                     <i class="fa fa-users fa-2x mb-2"></i>
-                    <h2 class="mb-1" data-val="500" id="num">000</h2>
+                    <h2 class="mb-1" data-val="{{ $countKK }}" id="num">0</h2>
                     <p class="mb-0">Kepala Keluarga</p>
                 </div>
             </div>
@@ -196,16 +207,15 @@
         </section>
 
         {{-- agenda --}}
-        <div class="album my-4" id="agenda">
+        <div class="agenda album" id="agenda">
             <div class="container">
-                <div class="p-2 text-center">
+                <div class="pb-2 text-center">
                     <h2 class="text-center blue-title text-capitalize fw-bold" id="">Agenda terbaru</h2>
                 </div>
                 <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-3 m-2">
                     <div class="col mb-4">
-                        <div class="card shadow-light">
+                        <div class="card card-agenda">
                             <img src="https://media.istockphoto.com/id/1164624416/photo/malaysia-hawker-culture-clay-pot-chicken-rice-stock-photo.jpg?b=1&s=170667a&w=0&k=20&c=65L8gxjLg-jpXtSSJVp3wT8c2Z5LL_eMkFTW8DVx9Bk=&auto=format&fit=crop&w=400&h=280&q=80" class="card-img-top object-fit-cover" alt="..." height="200">
-
                             <div class="card-body">
                             <h5 class="card-title text-capitalize fw-bold">Takjil Gratis</h5>
                             <p class="card-text thumbnail read-toggle" data-id='0'>Takjil gratis adalah sebuah program yang biasanya diadakan pada bulan Ramadan di mana makanan ringan atau minuman manis seperti kolak, kurma, atau air zam-zam dibagikan secara gratis kepada masyarakat yang sedang berpuasa.</p>
@@ -213,7 +223,7 @@
                         </div>
                     </div>
                     <div class="col mb-4">
-                        <div class="card">
+                        <div class="card card-agenda">
                         <img src="https://images.unsplash.com/photo-1615647112295-7f6355324a4a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=275&q=80" class="card-img-top object-fit-cover" alt="..." width="100%" height="200">
                             <div class="card-body">
                             <h5 class="card-title text-capitalize fw-bold">Bazar Murah</h5>
@@ -222,7 +232,7 @@
                         </div>
                     </div>
                     <div class="col mb-4">
-                        <div class="card">
+                        <div class="card card-agenda">
                             <img src="https://images.unsplash.com/photo-1631002165139-81c716532830?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=275&q=80" class="card-img-top object-fit-cover" alt="..." width="100%" height="200">
                             <div class="card-body" id="module">
                             <h5 class="card-title text-capitalize fw-bold">Perayaan Hari Kemerdekaan RI</h5>
@@ -231,22 +241,29 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div class="p-2 text-center">
+=======
+                <div class="pt-2 pb-2 text-center">
+>>>>>>> 82bcc3ea40716a853a6caf8dfd0088d65540cbaa
                     <a href="/page/agenda"><button class="btn-more">Lihat Lagi</button></a>
                 </div>
             </div>
+        </div>
 
 
 {{-- potensi --}}
-    <div class="album my-4" id="potensi">
+    <div class="potensi album" id="potensi" style="padding-top: 40px">
         <div class="container">
-            <div class="p-5 text-center">
-                <h2 class="text-center blue-title fw-bold">Potensi UMKM</h2>
+            <div class="pb-5 text-center">
+                <h2 class="text-center blue-title fw-bold m-0">Potensi UMKM</h2>
             </div>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mx-auto">
                 <div class="col">
-                    <div class="potensi mx-auto" style="width: 80%;">
-                        <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" class="m-sm-0 m-md-0 m-lg-0 card-img-top rounded-circle object-fit-cover" alt="..." width="200" height="200">
+                    <div class="mx-auto" style="width: 80%;">
+                        <div class="potensi-img">
+                            <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" class="m-sm-0 m-md-0 m-lg-0 card-img-top rounded-circle object-fit-cover" alt="..." width="200" height="200">
+                        </div>
                         <div class="card-body mt-3 text-center">
                           <h5 class="card-title text-capitalize fw-bold">mie Ayam Pak No</h5>
                           <p class="card-text mb-1">Mie dengan topping ayam dan kuah segar</p>
@@ -259,7 +276,7 @@
                       </div>
                 </div>
                 <div class="col">
-                  <div class="potensi mx-auto" style="width: 80%;">
+                  <div class="mx-auto" style="width: 80%;">
                       <img src="https://images.unsplash.com/photo-1567982047351-76b6f93e38ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" class="m-sm-0 m-md-0 m-lg-0 card-img-top rounded-circle object-fit-cover" alt="..." width="50%" height="200">
                       <div class="card-body mt-3 text-center">
                         <h5 class="card-title text-capitalize fw-bold">Pecel Ayam Jaya</h5>
@@ -273,7 +290,7 @@
                     </div>
               </div>
               <div class="col">
-                <div class="potensi mx-auto" style="width: 80%;">
+                <div class="mx-auto" style="width: 80%;">
                     <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80" class="m-sm-0 m-md-0 m-lg-0 card-img-top rounded-circle object-fit-cover" alt="..." width="50%" height="200">
                     <div class="card-body mt-3 text-center">
                       <h5 class="card-title text-capitalize fw-bold">Cookie Yahuttt</h5>
@@ -287,7 +304,7 @@
                   </div>
             </div>
             <div class="col">
-              <div class="potensi mx-auto" style="width: 80%;">
+              <div class="mx-auto" style="width: 80%;">
                   <img src="https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" class="m-sm-0 m-md-0 m-lg-0 card-img-top rounded-circle object-fit-cover" alt="..." width="50%" height="200">
                   <div class="card-body mt-3 text-center">
                     <h5 class="card-title text-capitalize fw-bold">Kui Cakes</h5>
@@ -301,23 +318,17 @@
                 </div>
           </div>
             </div>
-            <div class="p-5 text-center">
+            <div class="pt-5 text-center">
             <a href="/potensi"><button class="btn-more">Lihat Lagi</button></a>
             </div>
     </div>
         </div>
 
-        <!-- galery start -->
-        <section class="container">
-            {{-- <h1 class="my-4 text-center text-lg-left">Galeri</h1> --}}
-            <div class="row row-cols-2 gallery">
-
-            </div>
         </div>
         <!-- about end -->
 
-        <!-- galery start -->
-        <div style="background: #eaeaea">
+        <!-- galeri start -->
+        <div class="galeri">
             <section class="container">
                 <div class="row row-cols-2 row-cols-sm-2 row-cols-md-4 g-4 mx-auto">
                     <div class="col-lg-3 col-md-4 col-xs-6 thumb">
